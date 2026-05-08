@@ -20,7 +20,7 @@ const requireRole = (role) => (req, res, next) => {
 
 const requireProjectRole = (requiredRole) => async (req, res, next) => {
   const pool = require('../config/db');
-  const { projectId } = req.params;
+  const projectId = req.params.id || req.params.projectId;
   const userId = req.user.id;
 
   try {
