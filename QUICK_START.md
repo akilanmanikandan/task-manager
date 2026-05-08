@@ -33,10 +33,12 @@ npm start
 ✓ Runs on http://localhost:3000 (opens automatically)
 
 ### 4. Test the App
-1. Register at login page
-2. Create a project
+1. **Register at login page** (first user automatically becomes admin ✨)
+2. You can now create a project
 3. Create tasks and assign them
 4. Check dashboard for stats
+
+**Note:** First registered user gets admin role automatically. Subsequent users are members.
 
 ## 🚢 Deploy to Railway
 

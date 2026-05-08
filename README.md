@@ -85,11 +85,16 @@ A full-stack web application for managing projects, assigning tasks, and trackin
 
 ## Usage
 
-1. Register a new account or login
-2. Create a project (admin only)
-3. Add team members to the project
-4. Create and assign tasks
-5. Track progress on the dashboard
+1. **Register a new account** (first user becomes admin automatically, subsequent users are members)
+2. **Create a project** (admin only)
+3. **Add team members** to the project
+4. **Create and assign tasks**
+5. **Track progress** on the dashboard
+
+### Admin Features
+- Create and manage projects
+- Add/remove team members
+- Manage tasks across team
 
 ## Database Schema
 

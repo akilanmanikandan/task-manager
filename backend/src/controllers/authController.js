@@ -13,7 +13,12 @@ const register = async (req, res) => {
     if (existing) return res.status(409).json({ error: 'Email already registered' });
 
     const passwordHash = await bcrypt.hash(password, 10);
-    const user = await userModel.createUser(name, email, passwordHash);
+
+    const allUsers = await userModel.getAllUsers();
+    const isFirstUser = allUsers.length === 0;
+    const role = isFirstUser ? 'admin' : 'member';
+
+    const user = await userModel.createUser(name, email, passwordHash, role);
 
     const token = jwt.sign(
       { id: user.id, email: user.email, role: user.role },
